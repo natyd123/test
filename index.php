@@ -1,9 +1,13 @@
 <?php
-include "Person.php";
-include "Car.php";
+include "Truck.php";
 
-$p1 = new Person("Pavel", 100, 1, 40);
-$car1 = new Car("Skoda", "cervena", 50, 6);
+$truck = new Truck("Volvo", "blue", 80, 12, 500);
 
-$car1->boardPerson($p1);
-$car1->person->sayHello();
+$truck->boardPerson("Petr");
+$truck->loadCargo(200);
+
+echo "Model: " . $truck->model . "<br>";
+echo "Color: " . $truck->color . "<br>";
+echo "Gas: " . $truck->gas_in_tank . "<br>";
+echo "Cargo: " . $truck->cargoWeight . " kg<br>";
+echo "Driver: " . $truck->person;
